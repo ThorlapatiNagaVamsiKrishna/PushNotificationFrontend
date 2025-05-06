@@ -31,7 +31,7 @@ const Login = () => {
                     },
                     body: JSON.stringify(loginDetails)
                 }
-                const response = await fetch('http://localhost:5000/user/login', payload)
+                const response = await fetch('https://pushnotificationbackend-2.onrender.com/user/login', payload)
                 if (response.status === 200) {
                     const data  = await response.json()
                     Cookie.set('user' , JSON.stringify(data))

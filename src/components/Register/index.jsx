@@ -71,7 +71,7 @@ const Register = () => {
                     },
                     body: JSON.stringify(formData)
                 }
-                const response = await fetch('http://localhost:5000/user/register', payload)
+                const response = await fetch('https://pushnotificationbackend-2.onrender.com/user/register', payload)
                 if (response.status === 201) {
                     const data = await response.json()
                     console.log(data)

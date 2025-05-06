@@ -28,7 +28,7 @@ const handleSubmit =  async (e) => {
             },
             body: JSON.stringify({user: user.userId, otp})
         }
-        const response = await fetch('http://localhost:5000/user/otp', payload)
+        const response = await fetch('https://pushnotificationbackend-2.onrender.com/user/otp', payload)
         const data = await response.json()
         if(response.status === 200 ) {
             Cookie.set('jwtToken', data.token)

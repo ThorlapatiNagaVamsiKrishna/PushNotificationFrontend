@@ -24,7 +24,7 @@ const App = () => {
       },
       body: JSON.stringify({user: user.userId, fcmToken})
     }
-    const response = await fetch('http://localhost:5000/send/fcm', payload)
+    const response = await fetch('https://pushnotificationbackend-2.onrender.com/send/fcm', payload)
     const data = response.json()
   } 
 
@@ -40,7 +40,7 @@ const App = () => {
   }, []);
 
   const handleFcmToken = async (product) => {
-    const res = await fetch('http://localhost:5000/send/order', {
+    const res = await fetch('https://pushnotificationbackend-2.onrender.com/send/order', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
